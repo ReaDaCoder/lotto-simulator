@@ -13,6 +13,9 @@ body{
 img{
     width:250px;
 }
+.row{
+    display: grid;
+}
 h1{
     font-weight: 500;
     font-style: normal;
