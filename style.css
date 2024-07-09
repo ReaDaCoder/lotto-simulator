@@ -5,8 +5,9 @@ body{
     text-align: center;
     border: solid;
     border-color: black;
-    border-radius: 40%;
-    border-width: medium;
+    border-radius: 15px;
+    margin: 25px;
+    padding-bottom: 50px;
 
 }
 img{
@@ -22,6 +23,6 @@ button{
     text-align: center;
     width: 150px;
     background-color: #069EDB;
-    padding: 35px auto;
     border-radius: 35px;
+    text-decoration: none;
 }
