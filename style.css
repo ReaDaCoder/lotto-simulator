@@ -3,6 +3,7 @@ body{
 }
 .container{
     text-align: center;
+    border: solid;
     border-color: black;
     border-radius: 40%;
     border-width: medium;
@@ -21,5 +22,6 @@ button{
     text-align: center;
     width: 150px;
     background-color: #069EDB;
-    padding: 55px;
+    padding: 35px auto;
+    border-radius: 35px;
 }
