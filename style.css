@@ -1,3 +1,25 @@
 body{
     background-color: #F9DC1E;
 }
+.container{
+    text-align: center;
+    border-color: black;
+    border-radius: 40%;
+    border-width: medium;
+
+}
+img{
+    width:250px;
+}
+h1{
+    font-weight: 500;
+    font-style: normal;
+    line-height: 150px;
+    font-family: "Varela Round", sans-serif;
+}
+button{
+    text-align: center;
+    width: 150px;
+    background-color: #069EDB;
+    padding: 55px;
+}
