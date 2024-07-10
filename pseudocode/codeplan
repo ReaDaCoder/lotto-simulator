@@ -1,0 +1,11 @@
+/*Initialize Variables
+lottoNum: Array to store randomly generated lotto numbers.
+userNum Array to store user-selected numbers.
+matchNum Array to store matching numbers.
+numberOfNum: Number of numbers to be selected (6).
+maxNum: Maximum number available for selection (52).
+Created a function that generates lotto numbers
+created a function that will create an array of numbers that the user clicks
+submit users input numbers
+a function that will check if the numbers clicked by the user matches the numbers that were generated randomly
+a function that will display results*/
