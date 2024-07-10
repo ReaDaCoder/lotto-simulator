@@ -19,6 +19,20 @@ function createNum(){
 }
 document.getElementById("result").innerHTML = "Lotto Numbers: " + lottoNum.join(', ');
 }
+
+function getNumBox() {
+    const container = document.getElementById('numberContainer');
+    for (let i = 1; i <= maxNum; i++) {
+        let box = document.createElement('div');
+        box.className = `box ${getColor(i)}`;
+        box.id = `box${i}`;
+        box.innerHTML = i;
+        box.onclick = () => selectNumber(i);
+        container.appendChild(box);
+    }
+}
+
+
 function selectNumber(num) {
     let box = document.getElementById("box" + num);
     if (userNum.includes(num)) {
@@ -35,41 +49,29 @@ function selectNumber(num) {
 }
   
 
-// The function below will return user's input number
 function getInputNum(){
-    return "Enter your lotto numbers (between 1 and maxNumber):"
+    let input = document.getElementById("numberInput").value;
+    let inputArray = input.split(',').map(num => parseInt(num.trim()));
+    for (let num of inputArray) {
+        if (isNaN(num) || num < 1 || num > maxNum) {
+            alert("Invalid input. Please enter numbers between 1 and " + maxNum);
+            return;
+        }
+    }
+    userNum = inputArray;
+    document.getElementById("result").innerHTML = "User Numbers: " + userNum.join(', ');
 }
 
   
+ let winTicket = createNum();
+ document.querySelector(".winnumber");
 
-
-function checkNum(){}
-  
+    function checkNum() {
+        matchNum = userNum.filter(num => lottoNum.includes(num));
+        document.write("Matching Numbers: " + matchNum.join(', ') + "<br>");
+        document.write("Number of Matches: " + matchNum.length + "<br>");
+    }
 
 createNum()
 getInputNum()
 checkNum()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Display results
-/*PRINT "Lotto numbers are: ", lottoNumbers
-PRINT "Your numbers are: ", userNumbers
-PRINT "Matching numbers are: ", matchingNumbers
-
-IF matchingNumbers.size > 0 THEN
-  PRINT "Congratulations! You have ", matchingNumbers.size, " matching numbers."
-ELSE
-  PRINT "Sorry, no matching numbers. Better luck next time!"*/

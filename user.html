@@ -11,11 +11,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="row">
+    <header><div class="row">
         <div class="col-6"><img src="/media/lottery_logo.PNG" alt=""></div>
         <div class="col-6"><h1>Select 6 Numbers</h1></div>
     </div>
     <div id="result"></div>
+    <div class="userIput"></div>
+</header>
 
     <div class="container">
         
@@ -76,8 +78,9 @@
         <div class="box" id="boxblue"onclick="selectNumber(52)">52</div>
     </div>
     </div>
+    <input type="text" id="numberInput" placeholder="Enter your numbers separated by commas">
     <a href="index.html">
-        <button type="button" class="btn btn-primary">Submit</button>
+        <button type="button" onclick="getInputNum()" class="btn btn-primary">Submit</button>
     </a>
     <a href="index.html">
         <button type="button" class="btn btn-primary">Back to Homepage</button>
