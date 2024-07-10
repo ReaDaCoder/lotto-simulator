@@ -4,6 +4,14 @@
 ];*/
 document.write(lottoNum);
 
+let day = days[now.getDay()];
+let hours = now.getHours();
+let minutes = now.getMinutes();
+
+let h2 = document.querySelector("h2");
+
+h2.innerHTML = `${day} ${hours}:${minutes}`;
+
 let userNum = [];
 let matchNum = [];
 let numberOfNum =6;
