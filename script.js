@@ -6,11 +6,19 @@ document.write(lottoNum);
 
 let userNum = [];
 let matchNum = [];
-let numberOfNum =[];
-let maxNum = [];
+let numberOfNum =6;
+let maxNum = 52;
 
 // Function to generate random lotto numbers
-function createNum(){}
+function createNum(){
+  while (lottoNum.length < numberOfNum) {
+    let randomNum = Math.floor(Math.random() * maxNum) + 1;
+    if (!lottoNum.includes(randomNum)) {
+        lottoNum.push(randomNum);
+    }
+}
+document.getElementById("result").innerHTML = "Lotto Numbers: " + lottoNum.join(', ');
+}
   
 
 // The function below will return user's input number
