@@ -19,6 +19,20 @@ function createNum(){
 }
 document.getElementById("result").innerHTML = "Lotto Numbers: " + lottoNum.join(', ');
 }
+function selectNumber(num) {
+    let box = document.getElementById("box" + num);
+    if (userNum.includes(num)) {
+        userNum = userNum.filter(n => n !== num);
+        box.classList.remove("selected");
+    } else {
+        if (userNum.length < numberOfNum) {
+            userNum.push(num);
+            box.classList.add("selected");
+        } else {
+            alert("You can only select " + numberOfNum + " numbers.");
+        }
+    }
+}
   
 
 // The function below will return user's input number
