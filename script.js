@@ -17,6 +17,20 @@ let matchNum = [];
 let numberOfNum =6;
 let maxNum = 52;
 
+//function responsible displaying balls
+const displayBallsArena = () => {
+    ballsArena.arenaArr.forEach((ball) => {
+      const myBall = document.createElement("div");
+      myBall.classList.add("ball");
+      myBall.innerText = ball.number;
+      myBall.dataset.number = ball.number;
+      ballContainer.appendChild(myBall);
+      ballsArena.displaydBallsArr.push(myBall);
+      myBall.addEventListener("click", () => clickBall(ball, myBall));
+    });
+  };
+  
+
 // Function to generate random lotto numbers
 function createNum(){
   while (lottoNum.length < numberOfNum) {
@@ -89,3 +103,34 @@ function getInputNum(){
 createNum()
 getInputNum()
 checkNum()
+
+    simulateDrawButton.addEventListener('click', simulateDraw);
+
+    function generateBoards(boardCount, lottoPlus1, lottoPlus2) {
+        boardContainer.innerHTML = '';
+        ticketInfo.innerHTML = '';
+        let ticketPrice = 0;
+        let ticket = {
+            id: generateTicketId(),
+            date: new Date().toISOString(),
+            boards: [],
+            lottoPlus1: lottoPlus1,
+            lottoPlus2: lottoPlus2,
+            price: 0
+        };
+
+        for (let i = 0; i < boardCount; i++) {
+            let board = createBoard();
+            ticket.boards.push(board);
+            ticketPrice += 5;
+
+            if (lottoPlus1) ticketPrice += 2.5;
+            if (lottoPlus2) ticketPrice += 2.5;
+        }
+
+        ticket.price = ticketPrice;
+        userTickets.push(ticket);
+        localStorage.setItem('userTickets', JSON.stringify(userTickets));
+
+        ticketInfo.textContent = `Ticket ID: ${ticket.id}, Total Price: R${ticket.price.toFixed(2)}`;
+    }
