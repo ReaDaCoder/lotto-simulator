@@ -5,6 +5,9 @@ body {
     display:grid;
     place-items: center;
   }
+  header{
+    background-color: red;
+  }
   
   .container {
     text-align: center;
