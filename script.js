@@ -47,6 +47,7 @@ function getColor(num) {
 }
 
 
+
 function selectNumber(num) {
     let box = document.getElementById("box" + num);
     if (userNum.includes(num)) {
@@ -89,3 +90,13 @@ function getInputNum(){
 createNum()
 getInputNum()
 checkNum()
+
+/*function displayTickets(){
+    let ticketElement = document.querySelector(".keyboard");
+    let tickets = ["Ticket1", "Ticket2", "Ticket3", "Ticket4", "Ticket5", "Ticket6", "Ticket7", "Ticket8", "Ticket9", "Ticket10"];
+    let ticketHTML = '<div class="row">';
+    tickets.forEach(function(ticket){
+        ticketHTML = ticketHTML +
+        ''
+    });
+}*/

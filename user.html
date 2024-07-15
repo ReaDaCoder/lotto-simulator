@@ -13,8 +13,17 @@
 <body>
     <header><div class="row">
         <div class="col-6"><img src="/media/lottery_logo.PNG" alt=""></div>
-        <div class="col-6"><h1>Select 6 Numbers</h1></div>
+        <div class="col-6"><h1>National Lottery</h1></div>
     </div>
+    <form id="userForm">
+        <label for="boardCount">Number of Boards:</label>
+        <input type="number" id="boardCount" name="boardCount" min="1" max="52" required>
+        <label for="lottoPlus1">Lotto Plus 1:</label>
+        <input type="checkbox" id="lottoPlus1" name="lottoPlus1">
+        <label for="lottoPlus2">Lotto Plus 2:</label>
+        <input type="checkbox" id="lottoPlus2" name="lottoPlus2">
+        <button type="submit">Generate Boards</button>
+    </form>
     <div id="result"></div>
     <div class="userIput"></div>
 </header>
@@ -45,7 +54,7 @@
                 <button class="btn" id="boxyellow">18</button>
                 <button class="btn" id="boxyellow">19</button>
                 <button class="btn"id="boxyellow">20</button>
-                <button class="btn">21</button>
+                <button class="btn" id="boxyellow">21</button>
             </div>
             <div class="row">
                 <button class="btn"id="boxyellow">22</button>
