@@ -103,9 +103,7 @@ function getInputNum(){
 
 createNum()
 getInputNum()
-checkNum()
-
-<<<<<<< HEAD
+checkNum() 
 /*function displayTickets(){
     let ticketElement = document.querySelector(".keyboard");
     let tickets = ["Ticket1", "Ticket2", "Ticket3", "Ticket4", "Ticket5", "Ticket6", "Ticket7", "Ticket8", "Ticket9", "Ticket10"];
@@ -115,7 +113,7 @@ checkNum()
         ''
     });
 }*/
-=======
+
     simulateDrawButton.addEventListener('click', simulateDraw);
 
     function generateBoards(boardCount, lottoPlus1, lottoPlus2) {
@@ -146,4 +144,3 @@ checkNum()
 
         ticketInfo.textContent = `Ticket ID: ${ticket.id}, Total Price: R${ticket.price.toFixed(2)}`;
     }
->>>>>>> 4cdaf445aa7af93b1a70c23c91150cbe624673f2
