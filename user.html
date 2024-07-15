@@ -28,8 +28,33 @@
     <div class="userIput"></div>
 </header>
 
+        <form id="userForm">
+            <label for="boardCount">Number of Boards:</label>
+            <input type="number" id="boardCount" min="1" max="10" required>
+            <label for="lottoPlus1">Include Lotto Plus 1:</label>
+            <input type="checkbox" id="lottoPlus1">
+            <label for="lottoPlus2">Include Lotto Plus 2:</label>
+            <input type="checkbox" id="lottoPlus2">
+            <button type="submit">Generate Tickets</button>
+        </form>
+        <div id="boardContainer" class="container"></div>
+        <div id="ticketInfo"></div>
+    </section>
+    <section id="adminSection" class="hidden">
+        <h2>Admin Section</h2>
+        <button id="simulateDraw">Simulate Draw</button>
+        <div id="drawResults"></div>
+    </section>
+
+
+
+
+
+
+
+
     <div class="container">
-        <div class="keyboard">
+        <!--<div class="keyboard">
             <div class="row">
                 <button class="btn" id="boxred">1</button>
                 <button class="btn"id="boxred">2</button>
@@ -93,7 +118,7 @@
                 <button class="btn"id="boxblue">51</button>
                 <button class="btn"id="boxblue">5</button>
             </div>
-        </div>
+        </div>-->
     </div>
     <div id="numContainer" class="row"></div>
     <input type="text" id="numberInput" placeholder="Enter your numbers">
